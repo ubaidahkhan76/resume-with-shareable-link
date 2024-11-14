@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static-Resume Builder</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+        }
+        #container{
+            border: 2px solid black;
+            margin: 50px auto;
+            border-radius: 20px;
+            background-color: whitesmoke;
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+        }
+        #top{
+            color: white; 
+            background-color: rgb(67, 66, 66);
+            border-radius: 17px 18px 0px 0px;
+            padding-top: 40px;
+        }
+        #name{
+            text-align: center;
+        }
+        #status{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #addressBar{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            color: wheat;
+        }
+        #email, #location, #Number {
+            padding-top: 10px;
+        }
+        #email span, #location span, #Number span {
+            color: black;
+        }
+        #main{
+            background-color: ivory;
+            padding: 20px;
+        }
+        h2{
+            font-size: 1.5em;
+            color: rgb(67, 66, 66);
+            margin-bottom: 10px;
+        }
+        #summary, #experience, #education, #skills, #courses, #hobbies{
+            margin-bottom: 20px;
+        }
+        #summary p, #experience p, #education p, #skills p, #courses p, #hobbies p{
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        #education span{
+            font-weight: bold;
+        }
+        #create{
+            text-align: center;
+        }
+        #create p{
+            font-size: 35px;
+            color: brown;
+        }
+        #create a{
+            color: darkcyan;
+        }
+        #addressBar span{
+            color: bisque;
+        }
+        #share-section button{
+            background-color: #004bff;
+            width: 24.4vw;
+            color: white;
+            height: 5vh;
+            border-radius: 5px;
+            border-color: transparent;
+            
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            #top {
+                padding-top: 30px;
+            }
+            #addressBar {
+                flex-direction: column;
+                text-align: center;
+            }
+            #email, #location, #Number {
+                padding-left: 0;
+                padding-top: 10px;
+            }
+            #summary p, #experience p, #education p, #skills p, #courses p, #hobbies p {
+                font-size: 1.2em;
+            }
+            
+        }
+
+        @media screen and (max-width: 480px) {
+            #top {
+                padding-top: 20px;
+            }
+            #name h1 {
+                font-size: 1.8em;
+            }
+            #status h3 {
+                font-size: 1.2em;
+            }
+            #addressBar {
+                flex-direction: column;
+            }
+            #summary p, #experience p, #education p, #skills p, #courses p, #hobbies p {
+                font-size: 1.1em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+         
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="name">
+                <h1 contenteditable="true">Abu Ubaidah Khan</h1>
+            </div>
+            <div id="status">
+                <h3 contenteditable = "true"> Student</h3>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <div id="addressBar">
+                <div id="email"> <span>&#9993;</span><p contenteditable="true">abc@gamil.com</p></div><br>
+                <div id="location"><span>&#9990;</span> <p contenteditable="true">Karachi, Pakistan</p></div>
+                <div id="Number"><span>&#x260F;</span> <p contenteditable="true">031-0000-0000</p></div>
+            </div>
+            <br>
+            <hr>
+        </div>
+        <div id="main">
+            <div id="summary">
+                <h2>Summary</h2>
+                <div id="summaryInner">
+                    <p contenteditable = "true">Motivated high school student with a track record of academic excellence. Intends to develop professional work experience utilizing excellent communication and time management skills.</p>
+                </div>
+            </div>
+            <div id="experience">
+                <h2>Experience</h2>
+                <div id="experienceInner">
+                    <p contenteditable="true">Fresh</p>
+                </div>
+            </div>
+            <div id="education">
+                <h2>Education</h2>
+                <div id="educationInner">
+                    <p contenteditable="true"><span>Matric, Zubair Public School</span></p>
+                    <p contenteditable="true">April-2008 to June-2020</p>
+                    <p contenteditable="true"><span>Intermediate, Govt. Degree Boys College</span></p>
+                    <p contenteditable="true">June-2020 to September-2022</p>
+                </div>
+            </div>
+            <div id="skills">
+                <h2>Skills</h2>
+                <div id="skillsInner">
+                    <p contenteditable="true">Html</p>
+                    <p contenteditable="true">Css</p>
+                    <p contenteditable="true">JavaScript</p>
+                    <p contenteditable="true">TypeScript</p>
+                </div>
+            </div>
+            <div id="courses">
+                <h2>Courses</h2>
+                <div id="coursesInner">
+                    <p contenteditable="true">Currently enrolled in fullstack web development</p>
+                    <p contenteditable="true">Currently enrolled in GIAC</p>
+                </div>
+            </div>
+            <div id="hobbies">
+                <h2>Hobbies</h2>
+                <div id="hobbiesInner">
+                    <p contenteditable="true">Chess</p>
+                    <p contenteditable="true">Reading books</p>
+                </div>
+            </div>
+        </div>
+        <div id="share-section">
+            <button onclick="copyToClipboard()">Copy Link</button>
+            <button onclick="shareLink()">Share</button>
+        </div>
+    </div>
+    <script>
+        function copyToClipboard() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link copied to clipboard');
+            });
+        }
+    
+        function shareLink() {
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Check out my resume!',
+                    text: 'Here is my resume link:',
+                    url: url,
+                });
+            } else {
+                alert('Sharing not supported on this browser.');
+            }
+        }
+    </script>
+</body>
+</html>
